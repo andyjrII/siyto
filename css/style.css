@@ -11,48 +11,6 @@
 /*
 * Contexts
 */
-.context-dark,
-.bg-gray-700,
-.bg-gray-900,
-.bg-gray-3,
-.bg-primary,
-.context-dark h1,
-.bg-gray-700 h1,
-.bg-gray-900 h1,
-.bg-gray-3 h1,
-.bg-primary h1,
-.context-dark h2,
-.bg-gray-700 h2,
-.bg-gray-900 h2,
-.bg-gray-3 h2,
-.bg-primary h2,
-.context-dark h3,
-.bg-gray-700 h3,
-.bg-gray-900 h3,
-.bg-gray-3 h3,
-.bg-primary h3,
-.context-dark h4,
-.bg-gray-700 h4,
-.bg-gray-900 h4,
-.bg-gray-3 h4,
-.bg-primary h4,
-.context-dark h5,
-.bg-gray-700 h5,
-.bg-gray-900 h5,
-.bg-gray-3 h5,
-.bg-primary h5,
-.context-dark h6,
-.bg-gray-700 h6,
-.bg-gray-900 h6,
-.bg-gray-3 h6,
-.bg-primary h6,
-.context-dark [class^='heading-'],
-.bg-gray-700 [class^='heading-'],
-.bg-gray-900 [class^='heading-'],
-.bg-gray-3 [class^='heading-'],
-.bg-primary [class^='heading-'] {
-  color: #ffffff;
-}
 
 .context-dark .list-social a,
 .bg-gray-700 .list-social a,
@@ -1975,6 +1933,8 @@ a[href*='mailto'] {
 
 .project-classic img {
   width: 100%;
+  height: 262px;
+  object-fit: cover;
 }
 
 .project-classic-caption {
@@ -1988,26 +1948,17 @@ a[href*='mailto'] {
   pointer-events: auto;
 }
 
-.project-classic-title {
+.why-title {
   letter-spacing: 0.1em;
-  text-transform: uppercase;
   transition: all 0.3s ease;
   will-change: transform;
-}
-
-.project-classic-title a:hover {
-  color: rgba(17, 17, 17, 0.5);
+  color: #dc3545;
+  margin-bottom: 5px;
 }
 
 .project-classic-tag {
   letter-spacing: 0.2em;
   transition: all 0.3s ease;
-}
-
-@media (min-width: 992px) {
-  .project-classic-title {
-    letter-spacing: 0.2em;
-  }
 }
 
 @media (min-width: 992px) {
@@ -2023,10 +1974,6 @@ a[href*='mailto'] {
     padding: 95px 15px 15px;
     background: transparent;
   }
-  .desktop .project-classic-title {
-    opacity: 0;
-    transform: scale(1.2);
-  }
   .desktop .project-classic-tag {
     opacity: 0;
     transform: translate3d(0, 20px, 0);
@@ -2035,10 +1982,10 @@ a[href*='mailto'] {
     box-shadow: 0 6px 24px 0 rgba(0, 0, 0, 0.15);
   }
   .desktop .project-classic:hover .project-classic-caption {
-    background: rgba(253, 226, 49, 0.85);
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.5);
   }
-  .desktop .project-classic:hover .project-classic-tag,
-  .desktop .project-classic:hover .project-classic-title {
+  .desktop .project-classic:hover .project-classic-tag {
     opacity: 1;
     transform: none;
   }
