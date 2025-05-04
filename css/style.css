@@ -5,112 +5,6 @@
   --secondary-color: #052242;
 }
 
-/*
-* Trunk version 2.0.1
-*/
-/*
-* Contexts
-*/
-
-.context-dark .list-social a,
-.bg-gray-700 .list-social a,
-.bg-gray-900 .list-social a,
-.bg-gray-3 .list-social a,
-.bg-primary .list-social a {
-  color: #888888;
-}
-
-.context-dark .button-default,
-.bg-gray-700 .button-default,
-.bg-gray-900 .button-default,
-.bg-gray-3 .button-default,
-.bg-primary .button-default,
-.context-dark .button-default:focus,
-.bg-gray-700 .button-default:focus,
-.bg-gray-900 .button-default:focus,
-.bg-gray-3 .button-default:focus,
-.bg-primary .button-default:focus {
-  color: inherit;
-}
-
-.context-dark .button-default::before,
-.bg-gray-700 .button-default::before,
-.bg-gray-900 .button-default::before,
-.bg-gray-3 .button-default::before,
-.bg-primary .button-default::before,
-.context-dark .button-default:focus::before,
-.bg-gray-700 .button-default:focus::before,
-.bg-gray-900 .button-default:focus::before,
-.bg-gray-3 .button-default:focus::before,
-.bg-primary .button-default:focus::before {
-  border-color: #ffffff;
-}
-
-.context-dark .button-default:hover,
-.bg-gray-700 .button-default:hover,
-.bg-gray-900 .button-default:hover,
-.bg-gray-3 .button-default:hover,
-.bg-primary .button-default:hover,
-.context-dark .button-default:active,
-.bg-gray-700 .button-default:active,
-.bg-gray-900 .button-default:active,
-.bg-gray-3 .button-default:active,
-.bg-primary .button-default:active,
-.context-dark .button-default.active,
-.bg-gray-700 .button-default.active,
-.bg-gray-900 .button-default.active,
-.bg-gray-3 .button-default.active,
-.bg-primary .button-default.active {
-  color: #151515;
-}
-
-.context-dark .button-default:hover::before,
-.bg-gray-700 .button-default:hover::before,
-.bg-gray-900 .button-default:hover::before,
-.bg-gray-3 .button-default:hover::before,
-.bg-primary .button-default:hover::before,
-.context-dark .button-default:active::before,
-.bg-gray-700 .button-default:active::before,
-.bg-gray-900 .button-default:active::before,
-.bg-gray-3 .button-default:active::before,
-.bg-primary .button-default:active::before,
-.context-dark .button-default.active::before,
-.bg-gray-700 .button-default.active::before,
-.bg-gray-900 .button-default.active::before,
-.bg-gray-3 .button-default.active::before,
-.bg-primary .button-default.active::before {
-  border-color: transparent;
-}
-
-.context-dark .form-input,
-.bg-gray-700 .form-input,
-.bg-gray-900 .form-input,
-.bg-gray-3 .form-input,
-.bg-primary .form-input,
-.context-dark .form-label,
-.bg-gray-700 .form-label,
-.bg-gray-900 .form-label,
-.bg-gray-3 .form-label,
-.bg-primary .form-label {
-  color: #888888;
-}
-
-.context-dark .form-input,
-.bg-gray-700 .form-input,
-.bg-gray-900 .form-input,
-.bg-gray-3 .form-input,
-.bg-primary .form-input {
-  border-color: rgba(236, 236, 236, 0.1);
-}
-
-.context-dark .form-validation,
-.bg-gray-700 .form-validation,
-.bg-gray-900 .form-validation,
-.bg-gray-3 .form-validation,
-.bg-primary .form-validation {
-  color: inherit;
-}
-
 a:focus,
 button:focus {
   outline: none !important;
@@ -154,27 +48,6 @@ ol {
 ul li,
 ol li {
   display: block;
-}
-
-dl {
-  margin: 0;
-}
-
-dt,
-dd {
-  line-height: inherit;
-}
-
-dt {
-  font-weight: inherit;
-}
-
-dd {
-  margin-bottom: 0;
-}
-
-cite {
-  font-style: normal;
 }
 
 form {
@@ -243,61 +116,6 @@ html.boxed body {
     left: calc(50% - 1600px);
     right: calc(50% - 1600px);
   }
-}
-
-/*
-* Text styling
-*/
-.text-italic {
-  font-style: italic;
-}
-
-.text-normal {
-  font-style: normal;
-}
-
-.text-underline {
-  text-decoration: underline;
-}
-
-.text-strike {
-  text-decoration: line-through;
-}
-
-.font-weight-thin {
-  font-weight: 100;
-}
-
-.font-weight-light {
-  font-weight: 300;
-}
-
-.font-weight-regular {
-  font-weight: 400;
-}
-
-.font-weight-medium {
-  font-weight: 500;
-}
-
-.font-weight-sbold {
-  font-weight: 600;
-}
-
-.font-weight-bold {
-  font-weight: 700;
-}
-
-.font-weight-ubold {
-  font-weight: 900;
-}
-
-.text-spacing-0 {
-  letter-spacing: 0;
-}
-
-.text-primary {
-  color: var(--primary-color);
 }
 
 /*
@@ -731,7 +549,7 @@ html [class*='section-'].section-bottom-0 {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 75vh;
+    min-height: 85vh;
   }
   .section-full > .container {
     width: 100%;
@@ -749,7 +567,7 @@ html [class*='section-'].section-bottom-0 {
   .ie-10 .section-full,
   .ie-11 .section-full,
   .ie-edge .section-full {
-    height: 80vh;
+    height: 85vh;
   }
   .ie-10 .section-full > .container,
   .ie-11 .section-full > .container,
@@ -897,13 +715,6 @@ html [class*='section-'].section-bottom-0 {
 
 .bg-gray-3 {
   background-color: #231f20;
-}
-
-/*
-* Accent Backgrounds
-*/
-.bg-primary {
-  background-color: var(--primary-color);
 }
 
 /*
@@ -5994,7 +5805,7 @@ html.tablet .ui-to-top {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 100px;
+  padding: 200px 100px;
 }
 
 .how .carousel {
