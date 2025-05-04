@@ -806,6 +806,19 @@ p [style*='max-width'] {
   }
 }
 
+@media (max-width: 480px) {
+  .title-style-1 {
+    padding: 8px 20px;
+    font-size: 2.5rem;
+  }
+  .title-style-2 {
+    font-size: 1rem;
+  }
+  .subheadline {
+    font-size: 1.5rem;
+  }
+}
+
 * + .title-style-2-wrap {
   margin-top: 20px;
 }
@@ -1053,7 +1066,7 @@ a[href*='mailto'] {
   letter-spacing: 0.1em;
   transition: all 0.3s ease;
   will-change: transform;
-  color: #dc3545;
+  color: var(--primary-color);
   margin-bottom: 5px;
 }
 
@@ -1378,7 +1391,7 @@ img {
 
 .button-default,
 .button-default:focus {
-  color: #f1f1f1;
+  color: var(--secondary-color);
   border-color: transparent;
   background-color: transparent;
   padding: 10px;
@@ -2305,6 +2318,12 @@ html.tablet .ui-to-top {
   display: block;
 }
 
+@media (max-width: 480px) {
+  .rd-navbar-toggle {
+    margin-top: -10px;
+  }
+}
+
 /*
 *
 * RD Navbar Sidebar
@@ -2601,7 +2620,7 @@ html.tablet .ui-to-top {
   letter-spacing: 0.075em;
   font-family: 'Questrial', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--primary-color);
 }
 
 .nav-custom .nav-custom-counter:before {
@@ -2667,6 +2686,12 @@ html.tablet .ui-to-top {
   height: 570px;
 }
 
+.image-carousel {
+  position: relative;
+  width: 618px;
+  height: 614px;
+}
+
 .carousel-image {
   display: none;
   position: absolute;
@@ -2675,24 +2700,18 @@ html.tablet .ui-to-top {
   transition: opacity 1s ease-in-out;
 }
 
-.image-carousel {
-  position: relative;
-  width: 618px;
-  height: 614px;
-}
-
 .carousel-image.active {
   display: block;
 }
 
 .image-carousel-controls {
   position: absolute;
-  top: 80%;
+  top: 85%;
   width: 100%;
   display: flex;
   justify-content: center;
-  transform: translateX(47.5%);
-  pointer-events: none; /* prevents overlap issues */
+  transform: translateX(50%);
+  pointer-events: none;
 }
 
 .carousel-nav {
@@ -2700,7 +2719,6 @@ html.tablet .ui-to-top {
   border: none;
   color: var(--primary-color);
   font-size: 36px;
-  font-weight: lighter;
   cursor: pointer;
   pointer-events: auto;
   padding: 0 20px;
@@ -2708,7 +2726,18 @@ html.tablet .ui-to-top {
 }
 
 .carousel-nav:hover {
-  color: var(--primary-color); /* Or any accent color you use */
+  color: var(--primary-color);
+}
+
+@media (max-width: 480px) {
+  .image-carousel {
+    padding: 20px;
+    width: 100%;
+  }
+  .image-carousel-controls {
+    top: 78%;
+    transform: translateX(35%);
+  }
 }
 
 /* How It Works */
@@ -2839,6 +2868,15 @@ html.tablet .ui-to-top {
     transform: translateY(-100%) scale(0.5);
     opacity: 0;
     visibility: hidden;
+  }
+}
+
+@media (max-width: 480px) {
+  .how .wrapper {
+    padding: 200px 0 100px 0;
+  }
+  .hide {
+    display: none;
   }
 }
 
