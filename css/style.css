@@ -1620,6 +1620,16 @@ textarea.form-input {
   margin-top: 40px;
 }
 
+.footer-classic-list-social .icon,
+.contacts-classic .list-social .icon {
+  color: #dcdcdc;
+  cursor: pointer;
+
+  &:hover {
+    color: #6cca6c;
+  }
+}
+
 @media (min-width: 992px) {
   .footer-classic * + .rights {
     margin-top: 45px;
