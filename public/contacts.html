@@ -259,11 +259,12 @@
           </h2>
           <!-- RD Mailform-->
           <form
+            id="contactForm"
             class="rd-form rd-mailform"
             data-form-output="form-output-global"
             data-form-type="contact"
             method="post"
-            action="bat/rd-mailform.php"
+            action="/send"
           >
             <div class="form-wrap wow fadeInRight">
               <label class="form-label" for="contact-name">Name</label>
@@ -338,6 +339,33 @@
       </footer>
     </div>
     <div class="snackbars" id="form-output-global"></div>
+    <script>
+      const form = document.getElementById('contactForm');
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
+
+        try {
+          const res = await fetch('/send', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data),
+          });
+
+          const result = await res.json();
+          if (result.success) {
+            alert('Message sent! Check your email for confirmation.');
+            form.reset();
+          } else {
+            alert('Something went wrong.');
+          }
+        } catch (err) {
+          alert('Error sending message.');
+        }
+      });
+    </script>
+
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
     <script
