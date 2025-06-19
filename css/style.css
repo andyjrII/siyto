@@ -1266,7 +1266,7 @@ a[href*='mailto'] {
 
 @media (min-width: 992px) {
   .desktop .contacts-modern-link a:hover {
-    color: rgba(17, 17, 17, 0.5);
+    color: rgba(217, 217, 217, 0.5);
   }
   .desktop .contacts-modern:hover {
     border-color: transparent;
@@ -2687,13 +2687,7 @@ html.tablet .ui-to-top {
 
 .google-map-container {
   width: 100%;
-}
-
-.google-map {
-  height: 250px;
-  width: 100%;
-  height: 250px;
-  height: 570px;
+  border: 2px solid var(--primary-color);
 }
 
 .image-carousel {
