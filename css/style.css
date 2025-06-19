@@ -2957,3 +2957,24 @@ html.tablet .ui-to-top {
   font-weight: 300;
   margin: 0 0 20px;
 }
+
+/* FAQ */
+
+#faq {
+  .accordion {
+    width: 70%;
+  }
+
+  .accordion-button {
+    background-color: var(--primary-color);
+    color: #f1f1f1;
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 20px;
+  }
+
+  .accordion-body {
+    text-align: left;
+    color: var(--secondary-color);
+  }
+}
