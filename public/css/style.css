@@ -2980,3 +2980,13 @@ html.tablet .ui-to-top {
     }
   }
 }
+
+.tiktok svg {
+  fill: #f5f5f5;
+  width: 18px;
+  height: 18px;
+  :hover {
+    fill: #6cca6c;
+    transition: 0.3s ease;
+  }
+}
