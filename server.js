@@ -14,11 +14,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
-// Your form handler
+// Form handler
 app.post('/send', async (req, res) => {
   const { name, email, message } = req.body;
 
-  // 1. Create a transporter (use your own email credentials or test account)
+  // Create a transporter (use your own email credentials or test account)
   let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -27,7 +27,7 @@ app.post('/send', async (req, res) => {
     },
   });
 
-  // 2. Send main email to you
+  // Send main email to you
   await transporter.sendMail({
     from: email,
     to: process.env.GMAIL_USER,
@@ -37,7 +37,7 @@ app.post('/send', async (req, res) => {
            <p><strong>Message:</strong><br>${message}</p>`,
   });
 
-  // 3. Send autoresponse to user
+  // Send autoresponse to user
   await transporter.sendMail({
     from: process.env.GMAIL_USER,
     to: email,
