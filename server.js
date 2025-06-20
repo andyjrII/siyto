@@ -5,11 +5,14 @@ const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
+const PORT = process.env.PORT || 3000;
+
+// Middleware
 
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(express.static('public')); // Serve your static HTML/CSS/JS from /public
+app.use(express.static('public'));
 
 // Your form handler
 app.post('/send', async (req, res) => {
@@ -27,7 +30,7 @@ app.post('/send', async (req, res) => {
   // 2. Send main email to you
   await transporter.sendMail({
     from: email,
-    to: 'your-email@gmail.com',
+    to: process.env.GMAIL_USER,
     subject: `New Contact Form Message from ${name}`,
     html: `<p><strong>Name:</strong> ${name}</p>
            <p><strong>Email:</strong> ${email}</p>
@@ -36,17 +39,22 @@ app.post('/send', async (req, res) => {
 
   // 3. Send autoresponse to user
   await transporter.sendMail({
-    from: 'your-email@gmail.com',
+    from: process.env.GMAIL_USER,
     to: email,
-    subject: 'Thanks for contacting Siyto Trust Finance!',
-    html: `<p>Hi ${name},</p>
-           <p>Thanks for reaching out. We've received your message and will get back to you shortly.</p>
-           <p><strong>Siyto Trust Finance Team</strong></p>`,
+    subject: 'Thank You for Applying - Siyto Trust Finance',
+    html: `<p>Dear ${name},</p>
+           <p>Thank you for submitting your loan application to Siyto Trust Finance.</p>
+           <p>We've received your request and our team is already reviewing it. You can expect to hear from us within 48 hours regarding the next steps.</p>
+           <p>In the meantime, feel free to reply to this email or call us if you have any questions.</p>
+           <p>Thank you for trusting us to be part of your journey.</p>
+           <p>Warm regards,
+           <br>The Siyto Trust Finance Team
+           <br>Phone: 0810 871 0594</p>`,
   });
 
   res.json({ success: true, message: 'Emails sent successfully!' });
 });
 
-app.listen(process.env.PORT, () => {
+app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
