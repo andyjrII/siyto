@@ -2,9 +2,9 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+require('dotenv').config();
 
 const app = express();
-const PORT = 3000; // You can change this
 
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -19,8 +19,8 @@ app.post('/send', async (req, res) => {
   let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'your-email@gmail.com', // your email
-      pass: 'your-app-password', // use App Password if 2FA is on
+      user: process.env.GMAIL_USER,
+      pass: process.env.GMAIL_PASS,
     },
   });
 
@@ -47,6 +47,6 @@ app.post('/send', async (req, res) => {
   res.json({ success: true, message: 'Emails sent successfully!' });
 });
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
