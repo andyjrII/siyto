@@ -2912,24 +2912,24 @@ html.tablet .ui-to-top {
 
 .snip1533 figcaption {
   padding: 13% 10% 12%;
-}
 
-.snip1533 figcaption:before {
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  background-color: #fff;
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-  color: var(--primary-color);
-  content: '\f10e';
-  font-family: 'FontAwesome';
-  font-size: 32px;
-  font-style: normal;
-  left: 50%;
-  line-height: 60px;
-  position: absolute;
-  top: -30px;
-  width: 60px;
+  &:before {
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    color: var(--primary-color);
+    content: '\f10e';
+    font-family: 'FontAwesome';
+    font-size: 32px;
+    font-style: normal;
+    left: 50%;
+    line-height: 60px;
+    position: absolute;
+    top: -30px;
+    width: 60px;
+  }
 }
 
 .snip1533 h3 {
@@ -2970,5 +2970,13 @@ html.tablet .ui-to-top {
   .accordion-body {
     text-align: left;
     color: var(--secondary-color);
+  }
+}
+
+@media (max-width: 480px) {
+  #faq {
+    .accordion {
+      width: 100%;
+    }
   }
 }
